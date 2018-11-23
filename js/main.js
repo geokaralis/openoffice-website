@@ -122,7 +122,7 @@
     if (navigator.appVersion.indexOf("X11") != -1) OSName = "UNIX";
     if (navigator.appVersion.indexOf("Linux") != -1) OSName = "Linux";
 
-    if (navigator.appVersion.indexOf("iOS") != -1) {
+    if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
         OSName = "iOS";
         downloadButton.innerHTML = "Available on desktop only ";
         downloadButton.style.background = '#9a9a9a';
@@ -137,7 +137,7 @@
     }
 
     console.log('Your OS: ' + OSName);
-    console.log("Browser : " + window.ui.osversion);
+    console.log("Browser : " + window.ui.browser);
 
 
     var navMenu = document.querySelector('.nav-menu');
