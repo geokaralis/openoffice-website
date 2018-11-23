@@ -1,0 +1,53 @@
+html {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+  overflow: auto;
+}
+
+::selection {
+  background: #4085f8;
+  color: #fff;
+  text-shadow: none;
+}
+
+body.is-open {
+  overflow: hidden;
+}
+
+h1,h2,h3,h4 {
+  font-weight: normal;
+}
+
+.btn {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  padding: 5px 20px;
+  background: #fff;
+  color: #4085f8;
+  border-radius: 40px;
+}
+
+.btn-primary {
+  padding: 15px 40px;
+  background: #4085f8;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .1);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .2);
+}

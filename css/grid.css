@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 67.5rem;
+  padding: 0 20px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.col-2 {
+  width: 20%;
+}
+
+.col-3 {
+  width: 33.333333%;
+}
+
+.col-4 {
+  width: 40%;
+}
