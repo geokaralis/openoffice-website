@@ -160,7 +160,6 @@
 
     var footerLang = document.querySelector('.footer__lang');
     var footerLangB = document.querySelector('.footer__lang-btn');
-    var langDropdown = document.querySelector('.footer__lang-dropdown');
 
     footerLangB.addEventListener('click', function () {
         if (footerLang.classList.contains('is-open')) {
@@ -168,12 +167,7 @@
         } else {
             footerLang.classList.add('is-open');
         }
-
     });
-
-    // var dropdownLink = document.querySelectorAll('.dropdown-link');
-    // var dro = document.querySelectorAll('.dropdown-link a');
-    // var dropdownMenu = document.querySelectorAll('.dropdown-menu');
 
     function toggleDropdown(dropdown) {
         if (dropdown.classList.contains('is-open')) {
@@ -212,19 +206,30 @@
         do {
             if (targetElement == flyoutElement) {
                 // This is a click inside. Do nothing, just return.
-                // document.getElementById("flyout-debug").textContent = "Clicked inside!";
                 return;
             }
             // Go up the DOM
             targetElement = targetElement.parentNode;
         } while (targetElement);
-
-        // This is a click outside.
-        // document.getElementById("flyout-debug").textContent = "Clicked outside!";
+        
         footerLang.classList.remove('is-open');
     });
 
+    // Fallback blur
+    document.addEventListener("click", (evt) => {
+        for (let dropdown of dropdowns) {
+            let targetElement = evt.target; // clicked element
 
+            do {
+                if (targetElement == dropdown) {
+                    return;
+                }
+                // Go up the DOM
+                targetElement = targetElement.parentNode;
+            } while (targetElement);
+            dropdown.classList.remove('is-open');
+        }
+    });
 
     var nightMode = document.querySelector('.footer__night-mode');
     var nightModeButton = document.querySelector('.footer__night-mode button');
