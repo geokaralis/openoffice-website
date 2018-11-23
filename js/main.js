@@ -122,6 +122,20 @@
     if (navigator.appVersion.indexOf("X11") != -1) OSName = "UNIX";
     if (navigator.appVersion.indexOf("Linux") != -1) OSName = "Linux";
 
+    if (navigator.appVersion.indexOf("iOS") != -1) {
+        OSName = "iOS";
+        downloadButton.innerHTML = "Available on desktop only ";
+        downloadButton.style.background = '#9a9a9a';
+        heroImage.src = "img/writer-mac.png";
+    }
+
+    if (navigator.appVersion.indexOf("Android") != -1) {
+        OSName = "Android";
+        downloadButton.innerHTML = "Available on desktop only ";
+        downloadButton.style.background = '#9a9a9a';
+        heroImage.src = "img/writer-windows.png";
+    }
+
     console.log('Your OS: ' + OSName);
     console.log("Browser : " + window.ui.osversion);
 
