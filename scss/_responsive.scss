@@ -39,6 +39,10 @@
   .footer__lang-dropdown {
     left: 110%;
   }
+
+  .hero__content .link-small {
+    display: none;
+  }
 }
 
 @media (max-width:375px) {
@@ -61,20 +65,20 @@
   }
   
   .nav-menu {
-    height: calc(100% - 95px);
+    height: 100%;
   }
   
   .main-header.fixed .nav-menu {
-    height: calc(100% - 60px);
+    height: 100%;
   }
 }
 
 @media (max-width:320px) {
   .nav-menu {
-    height: calc(100% - 95px);
+    height: 100%;
   }
   
   .main-header.fixed .nav-menu {
-    height: calc(100% - 60px);
+    height: 100%;
   }
 }
