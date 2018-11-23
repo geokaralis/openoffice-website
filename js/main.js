@@ -124,14 +124,18 @@
 
     if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
         OSName = "iOS";
+        downloadButton.style.fontSize = '12px';
         downloadButton.innerHTML = "Available on desktop only ";
+        downloadButton.href = "javascript:void(0)";
         downloadButton.style.background = '#9a9a9a';
         heroImage.src = "img/writer-mac.png";
     }
 
     if (navigator.appVersion.indexOf("Android") != -1) {
         OSName = "Android";
+        downloadButton.style.fontSize = '12px';
         downloadButton.innerHTML = "Available on desktop only ";
+        downloadButton.href = "javascript:void(0)";
         downloadButton.style.background = '#9a9a9a';
         heroImage.src = "img/writer-windows.png";
     }
